@@ -84,7 +84,7 @@ inputs.forEach(input => input.addEventListener(`mousemove`		, 	handleUpdate));
 Attaching the JavaScript to the CSS variables - The first thing we will need to know is what the `suffix` of the value that we're working with. The `--base` variable does not have a unit suffix(px, em, rem, vh etc..), it's just a hex-code basically, but we can see that the `--spacing` and `--blur` variables do have `px` suffix, and so we can use that in conjunction with JavaScript to change the variable values. In order for us to achieve this , there is additional info attached to the `<input>` tag. In the attributes, we can see the `data-*` attribute, which is set to `data-sizing`, with the value of 'px', which we can use in conjunction with the CSS unit of 'px'. Using this we can start setting the `handleUpdate` function. We would want to create a new variable named `suffix` and assign `this.dataset` object to it.
 
 ````js
-const suffix = this.dataset.sizing
+const suffix = this.dataset.sizing;
 ````
 
 Explaining the `dataset` object - dataset is an object that will contain all the `data-*` attributes from that specific element. in our case the, because we set a variable with `dataset` object inside a function that is attached to an event-listener which listens to changes in values of the `input` tags, we get the value of `data-sizing` attribute. So this means that the `suffix` variable will be equal to the value of `data-sizing`, but because the 
@@ -156,4 +156,5 @@ const suffix = this.dataset.sizing || ''; 	     document.documentElement.style.s
 
 inputs.forEach(input => input.addEventListener(`change`, handleUpdate));
 inputs.forEach(input => input.addEventListener(`mousemove` , handleUpdate));
+
 ````
