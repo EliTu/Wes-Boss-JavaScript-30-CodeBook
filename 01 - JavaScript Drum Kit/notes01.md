@@ -8,7 +8,7 @@ When I press on the keyboard on the corresponding keys, I should hear the corres
 The sound effect should be reset upon each press of the key. 
 When the key is pressed and the sound played, I should also be able to see a visual indication that the effect took place, ideally with animation.
 
-### olution map:
+### Solution map:
 Create an event listener that waits for keyboard press, upon pressing the correct key, a sound will be played (sound files provided in the HTML file already). 
 Toggle the ‘playing’ class that has the CSS animation that should be triggered upon the key press, together with the sound.
 After the animation finished the class needs to be toggled off, we can create another event listener with ‘transitionend’ event. 
@@ -21,8 +21,10 @@ HTML “data-*” attribute - This is not a real standard in HTML, it was brough
 
 Creating an event listener - We will go over to the JS script file and start writing our script. The first thing we will need to do is to create an event listener that listens to keyboard presses. We will be listening to the ‘document’ or ‘window’ (any will work), and the event will be ‘keypress’  or ‘keydown’. Next, we have a function that has a parameter of an event, which we will name ‘e’: 
 
-```` document.addEventListener('keydown', (e) => {
-} ````
+````javascript
+document.addEventListener('keydown', (e) => {
+} 
+````
 
 If we console log the ‘e’ parameter we can see that whenever we press any key on the keyboard the event listener logs ‘KeyboardEvent’ object that has a lot of information inside of it about the key we pressed, including the corresponding key code associated with that specific keys. If we log ‘e.keyCode’, the console will print the corresponding keyCode value. 
 
