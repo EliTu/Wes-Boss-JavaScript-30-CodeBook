@@ -154,6 +154,12 @@ function handleUpdate() {
 const suffix = this.dataset.sizing || ''; 	     document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
    }
 
+<<<<<<< HEAD:03 - CSS Variables/READEME.md
 inputs.forEach(input => input.addEventListener(`change`, handleUpdate));
 inputs.forEach(input => input.addEventListener(`mousemove`,handleUpdate));
 ````
+=======
+inputs.forEach(input => input.addEventListener(`change`, 		handleUpdate));
+inputs.forEach(input => input.addEventListener(`mousemove`,	 handleUpdate));
+````
+>>>>>>> 9b0ac4a8782955d0e79212911bc048bdf0d93547:03 - CSS Variables/README.md
