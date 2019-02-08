@@ -1,6 +1,17 @@
 # Project #1 - JavaScript Drum Kit
 ### *By Eliad Touksher*
 
+## New things learned from this project:
+* HTML ‘data-*’ attribute which allows us to create a custom attribute in HTML.
+* Using JavaScript to Access an element in the DOM based on his attribute (using the [ ]). 
+* eventListener with ‘ keydown’ (or  ‘keypress’) and ‘transitionend’ event. 
+* Short single-purposed ‘if’ statements that take a boolean and if it’s true it ‘returns’ and terminates the function.
+* ‘.currentTime’ object that sets the time of certain variable or object.
+* ‘.play()’ method, that plays a media file located in the DOM.
+* ‘.querySelectorAll()’ method that selects all the instances that are specified in the brackets.
+* ‘.forEach()’ method that loops over each element of an array and performs a task that is specified as a function inside the brackets. 
+Creating a function declaration for eventListener is better than anonymous functions attached to the eventListener itself.
+
 ### Intro: 
 In this Challenge, we will create a little app that plays various drum sounds according to the corresponding key press. In the HTML file, we have various sound files that correspond to the keys, and we should whenever a key is pressed, the corresponding sound should be herd.  In addition, there’s a special ‘playing’ class in the CSS file, that highlights the outlines of the key border box and make it scale by 1.1 briefly. 
 
@@ -164,14 +175,3 @@ function removeTransition(e) {
    this.classList.remove('playing'); 
 }
 ````
-
-## New things learned from this project:
-* HTML ‘data-*’ attribute which allows us to create a custom attribute in HTML.
-* Using JavaScript to Access an element in the DOM based on his attribute (using the [ ]). 
-* eventListener with ‘ keydown’ (or  ‘keypress’) and ‘transitionend’ event. 
-* Short single-purposed ‘if’ statements that take a boolean and if it’s true it ‘returns’ and terminates the function.
-* ‘.currentTime’ object that sets the time of certain variable or object.
-* ‘.play()’ method, that plays a media file located in the DOM.
-* ‘.querySelectorAll()’ method that selects all the instances that are specified in the brackets.
-* ‘.forEach()’ method that loops over each element of an array and performs a task that is specified as a function inside the brackets. 
-Creating a function declaration for eventListener is better than anonymous functions attached to the eventListener itself.
