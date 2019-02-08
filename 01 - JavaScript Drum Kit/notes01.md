@@ -2,14 +2,14 @@
 ### *By Eliad Touksher*
 
 ## New things learned from this project:
-* HTML ‘data-*’ attribute which allows us to create a custom attribute in HTML.
+* HTML `‘data-*’` attribute which allows us to create a custom attribute in HTML.
 * Using JavaScript to Access an element in the DOM based on his attribute (using the [ ]). 
-* eventListener with ‘ keydown’ (or  ‘keypress’) and ‘transitionend’ event. 
-* Short single-purposed ‘if’ statements that take a boolean and if it’s true it ‘returns’ and terminates the function.
-* ‘.currentTime’ object that sets the time of certain variable or object.
-* ‘.play()’ method, that plays a media file located in the DOM.
-* ‘.querySelectorAll()’ method that selects all the instances that are specified in the brackets.
-* ‘.forEach()’ method that loops over each element of an array and performs a task that is specified as a function inside the brackets. 
+* eventListener with `‘keydown’` (or  `‘keypress’`) and `‘transitionend’` event. 
+* Short single-purposed ‘if’ statements that take a boolean and if it’s true it `‘return’` and terminates the function.
+* `‘.currentTime’` object that sets the time of certain variable or object.
+* `‘.play()’` method, that plays a media file located in the DOM.
+* `‘.querySelectorAll()’` method that selects all the instances that are specified in the brackets.
+* `‘.forEach()’` method that loops over each element of an array and performs a task that is specified as a function inside the brackets. 
 Creating a function declaration for eventListener is better than anonymous functions attached to the eventListener itself.
 
 ### Intro: 
@@ -27,11 +27,11 @@ After the animation finished the class needs to be toggled off, we can create an
 
 ## Wes’ Solution:
 
-First of all, we will look at the HTML file, we could see we have a bunch of <div> with the class of “key”. Each one of them has the information of the sound it should make and the key that needs to be pressed, but more importantly is that we need to know about the keyboard is that whenever we press any key, the computer registers a key code, which is a number that is associated with that particular key (for example ‘a’ = 65). So when we press ‘a’ on the keyboard, it will register as 65, and so if we will look in the keys and the <audio> files, they both have an attribute with the name “data-key”.
+First of all, we will look at the HTML file, we could see we have a bunch of `<div>` with the class of “key”. Each one of them has the information of the sound it should make and the key that needs to be pressed, but more importantly is that we need to know about the keyboard is that whenever we press any key, the computer registers a key code, which is a number that is associated with that particular key (for example ‘a’ = 65). So when we press ‘a’ on the keyboard, it will register as 65, and so if we will look in the keys and the `<audio>` files, they both have an attribute with the name “data-key”.
 
 HTML “data-*” attribute - This is not a real standard in HTML, it was brought up in HTML when people started making their own attributes and data types to put in their HTML code, and so HTML introduced the “data-” attribute in order to allow people to bind their own data and information in a custom made attribute, and so in our case, “data-key” is just a way to indicate that a certain number is the key code of that specific key. We use the ‘data-’ attribute to log and allow the code to find the key and sound that correspond to the value of the “data-key”, so when we press 65, the code will know that we pressed ‘a’, it will associate the sound file that also has the ‘data-key” of 65 and it will be able to perform the animation on that HTML element.
 
-Creating an event listener - We will go over to the JS script file and start writing our script. The first thing we will need to do is to create an event listener that listens to keyboard presses. We will be listening to the ‘document’ or ‘window’ (any will work), and the event will be ‘keypress’  or ‘keydown’. Next, we have a function that has a parameter of an event, which we will name ‘e’: 
+Creating an event listener - We will go over to the JS script file and start writing our script. The first thing we will need to do is to create an event listener that listens to keyboard presses. We will be listening to the ‘document’ or ‘window’ (any will work), and the event will be `‘keypress’`  or `‘keydown’`. Next, we have a function that has a parameter of an event, which we will name ‘e’: 
 
 ````javascript
 document.addEventListener('keydown', (e) => {
@@ -48,7 +48,7 @@ constpressSound = document.querySelector(`audio[data-key="${e.keyCode}"]`);
 } 
 ````
 
-Disabling irrelevant keys - If we log the ‘pressSound’ variable to the console and press the relevant keys, it will log the corresponding element. But pressing any other key that does not have a corresponding ‘data-key’ attribute will result in ‘null’. And so to not let that happen, we could do a simple ‘if’ statement with an empty ‘return’ (‘return’ causes the function to stop and “exit”), in order to stop the function from running when it could not find the element with the ‘daya-key’ attribute. 
+Disabling irrelevant keys - If we log the ‘pressSound’ variable to the console and press the relevant keys, it will log the corresponding element. But pressing any other key that does not have a corresponding ‘data-key’ attribute will result in ‘null’. And so to not let that happen, we could do a simple ‘if’ statement with an empty `‘return’` (‘return’ causes the function to stop and “exit”), in order to stop the function from running when it could not find the element with the `‘daya-key’` attribute. 
 
 ````javascript	
 if(!pressSound) return; 
