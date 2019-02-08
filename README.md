@@ -5,7 +5,7 @@ This repository is the code and my personal studying notebook for the Wes Boss's
 
 Each mini-project has its own folder in which lies the code files and the notes that I wrote while completing the challenge with the instructions of Wes Boss. 
 
-In some of the challenges I'll try to solve by myself and compare the results with the Wes' solution and in I'll forllow along Wes for the sake of studying. 
+In some of the challenges I'll try to solve by myself and compare the results with the Wes' solution and in I'll follow along Wes for the sake of learning new concepts. 
 
 ## Challenge Status list:
 - [x] Challenge #1 - JavaScript Drum Kit
