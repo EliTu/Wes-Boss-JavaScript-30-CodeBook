@@ -1,4 +1,5 @@
 # Project #1 - JavaScript Drum Kit
+### *By Eliad Touksher*
 
 ### Intro: 
 In this Challenge, we will create a little app that plays various drum sounds according to the corresponding key press. In the HTML file, we have various sound files that correspond to the keys, and we should whenever a key is pressed, the corresponding sound should be herd.  In addition, there’s a special ‘playing’ class in the CSS file, that highlights the outlines of the key border box and make it scale by 1.1 briefly. 
