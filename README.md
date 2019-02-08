@@ -1,5 +1,5 @@
 # Wes-Boss-JavaScript-30-CodeBook 
-## *By Eliad Touksher*
+### *By Eliad Touksher*
 
 This repository is the code and my personal studying notebook for the Wes Boss's 'JavaScript 30' tutorial course, which contains 30 JavaScript (But also some CSS based) challenges and mini-projects, each one focuses on different concepts of the JavaScript language and engages from various perspectives.
 
