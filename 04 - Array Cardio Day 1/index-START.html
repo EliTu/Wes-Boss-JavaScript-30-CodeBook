@@ -175,12 +175,12 @@
       'truck',
     ];
 
-    const transportation = data.reduce((obj, item) => {
-      if (!obj[item]) {
-        obj[item] = 0;
+    const transportation = data.reduce((total, item) => {
+      if (!total[item]) {
+        total[item] = 0;
       }
-      obj[item]++;
-      return obj;
+      total[item]++;
+      return total;
     }, {});
 
     console.log(transportation); // Returns an object that contains a list of the 'data' array elements and the number of times they appear in the array.
