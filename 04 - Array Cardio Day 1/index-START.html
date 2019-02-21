@@ -119,11 +119,11 @@
     // 3. Sort the inventors by birth date, oldest to youngest
 
     // Short function using ternary operator
-    const sortAges = inventors.sort((first, second) => first.year > second.year ? 1 : -1);
+    const sortAges = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
 
     /* Long function using 'if/else' statement
-    const sortAges = inventors.sort((first, second) => {
-      if (first.year > second.year) {
+    const sortAges = inventors.sort((a, b) => {
+      if (a.year > b.year) {
         return 1; // 
       } else {
         return -1;
@@ -150,16 +150,40 @@
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    /* Needs to be performed on the wikipedia page linked here on the browser dev tool 
 
+    const category = document.querySelector('.mw-category'); // Get the category list from the dev tools. 
+    const links = Array.from(category.querySelectorAll('a')); // Get all the links from the category and transform them from a node list into an array using the Array object prototype '.from' method.
+
+    const de = links.map((link) => link.textContent).filter(streetName => streetName.includes('de')); // First map the links into the text content string, and then filter them by filtering only strings that includes 'de' in them.
+    */
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    const alphabet = people.sort((last, next) => {
+      const [aLast, aFirst] = last.split(', '); // Split the array elements upon a coma and a space (', ).
+      const [bLast, bFirst] = next.split(', ');
+      return aLast > bLast ? 1 : -1; // Comparing the last name arrays and sorting.
+    });
+    console.table(alphabet); // Return an alphabetically sorted array.
+
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
-    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car',
-      'truck'
+    const data = [
+      'car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car',
+      'truck',
     ];
+
+    const transportation = data.reduce((obj, item) => {
+      if (!obj[item]) {
+        obj[item] = 0;
+      }
+      obj[item]++;
+      return obj;
+    }, {});
+
+    console.log(transportation); // Returns an object that contains a list of the 'data' array elements and the number of times they appear in the array.
   </script>
 </body>
 
