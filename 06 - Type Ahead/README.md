@@ -1,4 +1,4 @@
-# Project #2 - CSS + JS Clock
+# Project #6 - Type Ahead
 
 ### _By Eliad Touksher_
 
