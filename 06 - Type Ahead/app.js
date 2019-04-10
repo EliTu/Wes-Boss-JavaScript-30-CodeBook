@@ -6,7 +6,6 @@ const cities = [];
 fetch(endpoint)
     .then(data => data.json())
     .then(data => cities.push(...data));
-console.log(cities);
 
 function findMatches(wordsToMatch, cities) {
     return cities.filter(place => {
