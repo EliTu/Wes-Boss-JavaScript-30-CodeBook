@@ -1,4 +1,4 @@
-# Project #2 - CSS + JS Clock
+# Project #7  - Array Cardio Day 2
 
 ### _By Eliad Touksher_
 
