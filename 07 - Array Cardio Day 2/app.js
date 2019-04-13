@@ -49,15 +49,15 @@ const comments = [{
 //     if (age > 19) return true;
 // });
 
-const isAdult = people.some(person => (new Date().getFullYear()) - person.year >= 19);
+const areSomeAdults = people.some(person => (new Date().getFullYear()) - person.year >= 19);
 
-console.log(isAdult); // true. Some people in the array are above 19
+console.log(areSomeAdults); // true.
 
 // Array.prototype.every() // is everyone 19 or older?
 
 const areAllAdults = people.every(person => (new Date().getFullYear() - person.year >= 19));
 
-console.log(areAllAdults); // false. Not everyone are above 19
+console.log(areAllAdults); // false.
 
 // Array.prototype.find()
 // Find is like filter, but instead returns just the one you are looking for
@@ -65,7 +65,7 @@ console.log(areAllAdults); // false. Not everyone are above 19
 
 const findCommentById = comments.find(comment => comment.id === 823423);
 
-console.log(findCommentById); // Returns the comment with the id
+console.log(findCommentById); // Comment #2
 
 
 // Array.prototype.findIndex()
@@ -73,13 +73,13 @@ console.log(findCommentById); // Returns the comment with the id
 // delete the comment with the ID of 823423
 
 const deleteCommentByIndex = comments.findIndex(comment => comment.id === 823423);
-console.log(deleteCommentByIndex);
+console.log(deleteCommentByIndex); // 1
 
 // comments.splice(deleteCommentByIndex, 1);
-// console.log(comments);
+// console.log(comments); // [0 , 2 ,3 ,4]
 
-const newComments = [
-    ...comments.slice(0, deleteCommentByIndex),
-    ...comments.slice(deleteCommentByIndex + 1)
-];
-console.table(newComments);
+// const newComments = [
+//     ...comments.slice(0, deleteCommentByIndex),
+//     ...comments.slice(deleteCommentByIndex + 1)
+// ];
+// console.table(newComments); // [0 , 2 ,3 ,4]
