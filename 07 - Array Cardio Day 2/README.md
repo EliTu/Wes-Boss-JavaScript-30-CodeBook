@@ -4,6 +4,13 @@
 
 ## New things learned in this project
 
+- The `some()` method checks for at least one element in the array to satisfy a certain condition. Returns a boolean.
+- The `every()` method checks for all the elements in the array to satisfy a certain condition. Returns a boolean.
+- The `find()` method checks for an element in the array that holds a certain condition and returns the first element it finds.
+- The `findIndex()` method checks for an element in the array that holds a certain condition and returns the position of the first element it finds.
+- Wrapping a `console.log` argument with { } to return an object that holds more information about that argument. Works well with booleans.
+- Deleting an element and creating a new array the "Redux" way.
+
 ## Intro
 
 In this challenge we will again be looking at some useful array methods and how they can be used in our code. The array methods we will be focusing this time are `some()`, `every()`, `find()` and `findIndex()`.
