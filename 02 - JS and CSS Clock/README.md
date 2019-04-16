@@ -26,7 +26,7 @@ Make a `date()` method to get the current date.
 Make the handles interact with the `date()` values.
 Make the handles move on the X axis in an angle using CSS transform, according the value of the `date()` method.
 
-## Wess` Solution
+## Wes` Solution
 
 First we will need to perform some additional changes and additions in our CSS file to the `<div>` with the class of “hand”. By default, the handles are all stacked on each other and point to “9 o`clock”. In order to make them dynamically move we will need to give them CSS transform effects.
 

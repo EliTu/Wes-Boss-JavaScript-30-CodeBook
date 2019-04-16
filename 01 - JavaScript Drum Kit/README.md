@@ -30,7 +30,7 @@ Create an event listener that waits for keyboard press, upon pressing the correc
 Toggle the 'playing' class that has the CSS animation that should be triggered upon the key press, together with the sound.
 After the animation finished the class needs to be toggled off, we can create another event listener with `transitionend` event.
 
-## Wes`` Solution
+## Wes` Solution
 
 First of all, we will look at the HTML file, we could see we have a bunch of `<div>` with the class of “key”. Each one of them has the information of the sound it should make and the key that needs to be pressed, but more importantly is that we need to know about the keyboard is that whenever we press any key, the computer registers a key code, which is a number that is associated with that particular key (for example `a` = 65). So when we press `a` on the keyboard, it will register as 65, and so if we will look in the keys and the `<audio>` files, they both have an attribute with the name `data-key`.
 

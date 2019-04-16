@@ -23,7 +23,7 @@ If I'll type something like 'new', I should see a list of all the cities and sta
 
 We should first use an AJAX method to get the data from the cities source and put it into an array, then we could use `filter` to create a search point based on the user's query. Next up, we should input the results into a template HTML so we could append it to the DOM and display it in the UI. Next up we need to some regExp values that will help us to look and to select the words we pass in the search field. Lastly, we will need to write a function that will add the commas between a series of 3 numbers in the population number that is being displayed in the UI.
 
-## Wess` Solution
+## Wes` Solution
 
 ### Fetching the JSON data
 
