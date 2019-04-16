@@ -1,4 +1,4 @@
-# Project #2 - CSS + JS Clock
+# Project # 8 - Fun With HTML5 Canvas
 
 ### _By Eliad Touksher_
 
